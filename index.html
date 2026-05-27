@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Cover Letter | Roy Alexander Azofeifa Muñoz</title>
+  <!-- Fuentes modernas y limpias -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (gratuito, para iconos) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #eef2f5;
+      font-family: 'Inter', sans-serif;
+      color: #1e2a3e;
+      line-height: 1.5;
+      padding: 2rem 1.5rem;
+    }
+
+    /* contenedor principal con efecto de tarjeta */
+    .cover-letter-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.02);
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+
+    /* cabecera con gradiente sutil y remembranza al sitio original (azules/tech) */
+    .letter-header {
+      background: linear-gradient(135deg, #0f2b3d 0%, #1a4a6f 100%);
+      padding: 2rem 2.2rem 1.8rem;
+      color: white;
+    }
+
+    .name-title h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      margin-bottom: 0.3rem;
+      line-height: 1.2;
+    }
+
+    .name-title .tagline {
+      font-size: 1rem;
+      font-weight: 500;
+      opacity: 0.85;
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      padding: 0.2rem 0.8rem;
+      border-radius: 30px;
+      margin-top: 0.4rem;
+    }
+
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-top: 1.2rem;
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding-top: 1rem;
+    }
+
+    .contact-bar a, .contact-bar span {
+      color: #f0f6fe;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: 0.2s;
+    }
+
+    .contact-bar a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    /* cuerpo tipo carta */
+    .letter-body {
+      padding: 2.2rem 2.5rem 2.5rem;
+    }
+
+    .greeting {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 1.2rem;
+      color: #2c5a7a;
+    }
+
+    .intro-text {
+      font-size: 1rem;
+      margin-bottom: 1.4rem;
+      text-align: justify;
+    }
+
+    .section-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin: 1.5rem 0 0.8rem 0;
+      color: #0f2b3d;
+      border-left: 4px solid #2c7da0;
+      padding-left: 0.8rem;
+      letter-spacing: -0.2px;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 0.8rem 0 0.2rem;
+    }
+
+    .skill-badge {
+      background: #e9f0f5;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #1e4663;
+      transition: all 0.2s;
+    }
+
+    .skill-badge i {
+      margin-right: 6px;
+      font-size: 0.75rem;
+      color: #2c7da0;
+    }
+
+    .signature-area {
+      margin-top: 2.3rem;
+      padding-top: 1rem;
+      border-top: 2px solid #e2edf2;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+    }
+
+    .signature-text {
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    .signature-name {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #0f2b3d;
+      margin-top: 0.25rem;
+    }
+
+    .btn-pdf {
+      background: none;
+      border: 1px solid #bdd3e4;
+      padding: 0.5rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #2c5a7a;
+      cursor: pointer;
+      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-pdf:hover {
+      background: #eef2fa;
+      border-color: #2c7da0;
+      color: #1a4a6f;
+    }
+
+    footer {
+      background: #f8fafc;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.7rem;
+      color: #6f8eac;
+      border-top: 1px solid #e2edf2;
+    }
+
+    /* modo responsivo */
+    @media (max-width: 650px) {
+      body {
+        padding: 1rem;
+      }
+      .letter-header {
+        padding: 1.5rem;
+      }
+      .letter-body {
+        padding: 1.5rem;
+      }
+      .name-title h1 {
+        font-size: 1.7rem;
+      }
+    }
+
+    /* efecto sutil */
+    .highlight {
+      background: linear-gradient(120deg, #e7f0f9 0%, #e7f0f9 40%, transparent 60%);
+      padding: 0 0.2rem;
+      font-weight: 500;
+    }
+    p, li {
+      color: #2c3e50;
+    }
+    .contact-bar i {
+      width: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="cover-letter-container" id="coverLetterContainer">
+  <div class="letter-header">
+    <div class="name-title">
+      <h1>Roy Alexander Azofeifa Muñoz</h1>
+      <div class="tagline">
+        <i class="fas fa-laptop-code"></i> Systems Engineer | IT Infrastructure & Cybersecurity
+      </div>
+    </div>
+    <div class="contact-bar">
+      <span><i class="fas fa-map-marker-alt"></i> Costa Rica</span>
+      <a href="tel:+50683335665"><i class="fas fa-phone-alt"></i> +506 8333 5665</a>
+      <a href="mailto:royazofeifa@gmail.com"><i class="far fa-envelope"></i> royazofeifa@gmail.com</a>
+      <span><i class="fab fa-linkedin"></i> /in/roy-azofeifa</span>
+    </div>
+  </div>
+
+  <div class="letter-body">
+    <div class="greeting">
+      <i class="fas fa-user-tie"></i> Estimado/a reclutador/a:
+    </div>
+    
+    <p class="intro-text">
+      Reciba un cordial saludo. Mi nombre es <strong>Roy Alexander Azofeifa Muñoz</strong> y soy 
+      <strong>Ingeniero en Sistemas</strong> con amplia experiencia en infraestructura tecnológica, 
+      soporte técnico N1/N2, administración de redes, ciberseguridad y aseguramiento de calidad de software. 
+      Me dirijo a ustedes con gran interés en formar parte de su equipo de trabajo, donde pueda aportar 
+      mis conocimientos técnicos, capacidad analítica y compromiso profesional.
+    </p>
+
+    <p>
+      A lo largo de mi trayectoria he trabajado en entornos corporativos y técnicos desempeñando funciones 
+      relacionadas con soporte IT, monitoreo de redes, administración de servidores, mantenimiento preventivo y 
+      correctivo, configuración de VPNs y gestión de infraestructura tecnológica. Además, cuento con experiencia 
+      en atención al cliente y soporte regional, habiendo trabajado para empresas internacionales como 
+      <strong>Amazon</strong> e integrando equipos multidisciplinarios.
+    </p>
+
+    <div class="section-title">
+      <i class="fas fa-certificate"></i> Formación técnica y competencias clave
+    </div>
+    <div class="skills-grid">
+      <span class="skill-badge"><i class="fas fa-network-wired"></i> CCNA (ITN, SRWE, ENSA)</span>
+      <span class="skill-badge"><i class="fab fa-microsoft"></i> Azure Fundamentals</span>
+      <span class="skill-badge"><i class="fas fa-code"></i> Quality Assurance</span>
+      <span class="skill-badge"><i class="fas fa-shield-alt"></i> Ethical Hacking</span>
+      <span class="skill-badge"><i class="fas fa-chart-line"></i> Análisis de datos</span>
+      <span class="skill-badge"><i class="fab fa-js"></i> JavaScript / Frontend</span>
+      <span class="skill-badge"><i class="fas fa-robot"></i> Robótica educativa</span>
+      <span class="skill-badge"><i class="fas fa-cloud"></i> Power BI</span>
+    </div>
+
+    <p style="margin-top: 1rem;">
+      Poseo formación técnica en <strong>CCNA, Azure Fundamentals, Quality Assurance, Ethical Hacking y análisis de datos</strong>, 
+      complementada con habilidades en programación JavaScript y resolución de incidencias técnicas. Asimismo, mi experiencia 
+      como <strong>instructor de robótica y tecnología</strong> me ha permitido fortalecer habilidades de comunicación, liderazgo y 
+      trabajo en equipo. Durante mi desempeño en Inter-Tech Costa Rica y STS Security, brindé soporte nivel 1/2, administré 
+      redes empresariales, servidores y sistemas de CCTV. En Amazon consolidé mi capacidad de servicio regional con alto sentido 
+      de cumplimiento.
+    </p>
+    
+    <div class="section-title">
+      <i class="fas fa-rocket"></i> Valor diferencial
+    </div>
+    <p>
+      Me considero una persona <strong>responsable, adaptable y orientada a resultados</strong>, con facilidad para aprender nuevas 
+      tecnologías y enfrentar retos en ambientes dinámicos. Mi formación como <strong>Profesional en Educación (Maestría en Ciencias de la Educación)</strong>
+      y mi sólida base en ingeniería me permiten abordar los problemas técnicos con una visión analítica, didáctica y de mejora continua. 
+      Estoy convencido de que mi perfil técnico y mi disposición para aportar valor pueden contribuir positivamente a los objetivos de su organización.
+    </p>
+    
+    <div class="signature-area">
+      <div>
+        <div class="signature-text">Atentamente,</div>
+        <div class="signature-name">Roy Alexander Azofeifa Muñoz</div>
+        <div style="font-size: 0.75rem; color: #4f6f8f; margin-top: 5px;">
+          <i class="fas fa-download"></i> Disponible para entrevista inmediata
+        </div>
+      </div>
+      <button class="btn-pdf" id="printPdfBtn">
+        <i class="fas fa-file-pdf"></i> Guardar como PDF / Imprimir
+      </button>
+    </div>
+    
+    <p style="font-size: 0.85rem; margin-top: 1.2rem; background: #f3f9fe; padding: 0.7rem; border-radius: 16px;">
+      <i class="fas fa-check-circle" style="color:#2c7da0"></i> Agradezco sinceramente el tiempo brindado para considerar mi candidatura. 
+      Quedo a disposición para ampliar cualquier información y participar en una entrevista cuando lo consideren conveniente.
+    </p>
+  </div>
+  <footer>
+    <i class="far fa-file-alt"></i> Carta de presentación profesional - Roy Alexander Azofeifa Muñoz · Ingeniero en Sistemas
+  </footer>
+</div>
+
+<script>
+  (function() {
+    // Función para imprimir / generar PDF usando la ventana de impresión nativa
+    const printBtn = document.getElementById('printPdfBtn');
+    
+    function printOrPDF() {
+      // Guardamos el título original
+      const originalTitle = document.title;
+      document.title = "Cover_Letter_Roy_Azofeifa_Muñoz";
+      
+      // Clonamos el contenido principal para mejor presentación en impresión
+      const elementToPrint = document.getElementById('coverLetterContainer');
+      if (!elementToPrint) return;
+      
+      // Creamos una ventana de impresión
+      const printWindow = window.open('', '_blank', 'width=900,height=700,toolbar=yes,scrollbars=yes');
+      if (!printWindow) {
+        alert("Por favor, permite las ventanas emergentes para generar el PDF.");
+        return;
+      }
+      
+      // Estilos que replican el diseño responsive y también optimizan para impresión
+      const styles = document.querySelector('style').innerHTML;
+      const fontLink = '<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">';
+      const faLink = '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">';
+      
+      printWindow.document.write(`
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <title>CoverLetter_RoyAzofeifa</title>
+            <meta charset="UTF-8">
+            ${fontLink}
+            ${faLink}
+            <style>
+              * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+              }
+              body {
+                background: white;
+                font-family: 'Inter', sans-serif;
+                color: #1e2a3e;
+                padding: 1.5rem;
+                line-height: 1.5;
+              }
+              .cover-letter-container {
+                max-width: 1000px;
+                margin: 0 auto;
+                background: white;
+                border-radius: 20px;
+                box-shadow: none;
+                border: 1px solid #e0e9ef;
+              }
+              .letter-header {
+                background: linear-gradient(135deg, #0f2b3d 0%, #1a4a6f 100%);
+                padding: 1.8rem;
+                color: white;
+                border-radius: 20px 20px 0 0;
+              }
+              .name-title h1 { font-size: 1.9rem; }
+              .contact-bar { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 0.8rem;}
+              .letter-body { padding: 1.8rem; }
+              .section-title { font-weight: 700; margin: 1.2rem 0 0.5rem; border-left: 4px solid #2c7da0; padding-left: 0.8rem; }
+              .skills-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.6rem 0; }
+              .skill-badge { background: #e9f0f5; padding: 0.2rem 1rem; border-radius: 40px; font-size: 0.75rem; font-weight: 500; }
+              .btn-pdf { display: none; }
+              .signature-area { margin-top: 1.5rem; border-top: 1px solid #dce5ec; padding-top: 1rem; display: flex; justify-content: space-between;}
+              footer { background: #f8fafc; text-align: center; padding: 0.8rem; font-size: 0.7rem; border-top: 1px solid #e2edf2; }
+              a, .contact-bar a { color: #f0f6fe; text-decoration: none; }
+              .greeting { font-weight: 500; margin-bottom: 0.8rem; }
+            </style>
+          </head>
+          <body>
+            ${elementToPrint.outerHTML}
+            <script>
+              // Eliminamos el botón PDF en la copia impresa para no mostrar acciones innecesarias
+              window.onload = function() {
+                const btn = document.querySelector('.btn-pdf');
+                if(btn) btn.style.display = 'none';
+              };
+            <\/script>
+          </body>
+        </html>
+      `);
+      
+      printWindow.document.close();
+      printWindow.focus();
+      // Esperamos que carguen los recursos y luego lanzamos imprimir
+      printWindow.onload = function() {
+        printWindow.print();
+        // Opcional: no cerramos automáticamente para que el usuario pueda guardar PDF tranquilamente
+      };
+      
+      // Restauramos título
+      document.title = originalTitle;
+    }
+    
+    if (printBtn) {
+      printBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        printOrPDF();
+      });
+    }
+    
+    // Efecto adicional: podemos añadir un tooltip o animación mínima, totalmente opcional
+    const badges = document.querySelectorAll('.skill-badge');
+    badges.forEach(badge => {
+      badge.addEventListener('mouseenter', () => {
+        badge.style.transform = 'scale(1.02)';
+        badge.style.transition = '0.1s';
+      });
+      badge.addEventListener('mouseleave', () => {
+        badge.style.transform = 'scale(1)';
+      });
+    });
+  })();
+</script>
+</body>
+</html>
